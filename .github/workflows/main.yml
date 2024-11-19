@@ -15,9 +15,9 @@ jobs:
     - name: Lint with Pylint
       run: |
         make lint
-    - name: Test wity Pytest
-      run: |
-        make test
     - name: Format code with Python black
       run: |
         make format
+    - name: Test wity Pytest
+      run: |
+        make test
