@@ -46,3 +46,7 @@ python3 -m venv .venv
 source ./.venv/bin/activate
 make install
 ```
+
+## Running Project
+
+This is an interactive project that uses a Jupyter Notebook to showcase the steps in the RAG process; you can open the notebook [here](wine_rag.ipynb).
