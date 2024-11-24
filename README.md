@@ -21,6 +21,22 @@ This project is an adaptation to _[Alfredo Desa's RAG tutorial](https://github.c
 2. enumerate steps required to setup an LLM locally;
 3. define a single jupyter notebook with all the code showcasing the RAG process. 
 
+## Third-Party Technologies
+
+Following are the different third-party technologies used by this project:
+
+### Vector Database
+
+We use _[Qdrant](https://github.com/qdrant/qdrant#readme)_ as both, a vector similarity search engine and a vector database to store a vectorized version of the wines notes, along with the associated wine data (payload).
+
+### Large Language Model
+
+In order to use a self-contained, locally deployed LLM, we make use of a _[Llamafile](https://github.com/Mozilla-Ocho/llamafile#readme)_.  More specifically, we use the _**mxbai-embed-large-v1**_ LLM (0.7 GB) which you can [download from here](https://huggingface.co/Mozilla/mxbai-embed-large-v1-llamafile/resolve/main/mxbai-embed-large-v1-f16.llamafile?download=true).
+
+### Open AI's Python API
+
+To programmatically connect to the locally running LLM, we use _[Open AI's Python API](https://pypi.org/project/openai/)_
+
 ## Environment Setup
 
 Create a Python virtual environment and install required dependencies:
