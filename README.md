@@ -27,11 +27,14 @@ Following are the different third-party technologies used by this project:
 
 ### Vector Database
 
-We use _[Qdrant](https://github.com/qdrant/qdrant#readme)_ as both, a vector similarity search engine and a vector database to store a vectorized version of the wines notes, along with the associated wine data (payload).
+We use _[Qdrant](https://github.com/qdrant/qdrant#readme)_ as both, a vector similarity search engine and a vector database to store a vectorized version of the wine notes, along with the associated wine data (payload).
 
 ### Large Language Model
 
-In order to use a self-contained, locally deployed LLM, we make use of a _[Llamafile](https://github.com/Mozilla-Ocho/llamafile#readme)_.  More specifically, we use the _**mxbai-embed-large-v1**_ LLM (0.7 GB) which you can [download from here](https://huggingface.co/Mozilla/mxbai-embed-large-v1-llamafile/resolve/main/mxbai-embed-large-v1-f16.llamafile?download=true).
+In order to use a self-contained, locally deployed LLM, we make use of a _[Llamafile](https://github.com/Mozilla-Ocho/llamafile#readme)_.  More specifically, two LLMs were tested:
+
+1. _**mxbai-embed-large-v1**_ (0.7 GB)  ([download here](https://huggingface.co/Mozilla/mxbai-embed-large-v1-llamafile/resolve/main/mxbai-embed-large-v1-f16.llamafile?download=true))
+2. _**TinyLlama-1.1B**_ (2.2G) ([download here](https://huggingface.co/Mozilla/TinyLlama-1.1B-Chat-v1.0-llamafile/resolve/main/TinyLlama-1.1B-Chat-v1.0.F16.llamafile?download=true))
 
 ### Open AI's Python API
 
@@ -47,6 +50,23 @@ source ./.venv/bin/activate
 make install
 ```
 
+Next, download the llamafile wrapping the LLM and run the downloaded file to launch a local web server exposing the LLM.  From a terminal, run:
+
+```
+./llm_server.py
+```
+
+Once the download finishes, and the server is up, you're terminal should look like this:
+
+![Llamafile](images/llamafile.png)
+
+Feel free to interact with the chat directly on the terminal, or by pointing a brower to http://127.0.0.1:8080/
+
 ## Running Project
 
-This is an interactive project that uses a Jupyter Notebook to showcase the steps in the RAG process; you can open the notebook [here](wine_rag.ipynb).
+This is an interactive project that uses a Jupyter Notebook to showcase the steps in the RAG process.  To open the notebook, first open a new terminal.  Then launch a local notebook server by running the following command from the root of this project:
+
+```
+jupyter notebook wine_rag.ipynb
+```
+Your browser should automatically open with the notebook loaded; if not, point your browser to: http://localhost:8888/notebooks/wine_rag.ipynb
