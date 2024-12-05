@@ -9,7 +9,7 @@ Retrieval-Augmented Generation (RAG) is the process of optimizing the output of 
 
 ## Description
 
-This project showcases how an external data source can be incorporated in the generation process of a pre-trained, foundation model.   Thus, in this case, the authoritative knowlege base is constructed from a data set of wine ratings, by implementing the following ETL data pipeline:
+This project showcases how an external data source can be incorporated in the generation process of a pre-trained, foundation model.   Thus, in this case, the authoritative knowledge base is constructed from a data set of wine ratings, by implementing the following ETL data pipeline:
 
 ![ETL pipeline](images/pipeline.png)
 
