@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/jsandino/wine-rag/actions/workflows/main.yml/badge.svg)](https://github.com/jsandino/wine-rag/actions/workflows/main.yml)
+
 # Wine RAG
 A wine rating data set used for Retrieval Augmented Generation (RAG) on a local LLM.
 
